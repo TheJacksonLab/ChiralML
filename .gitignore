@@ -1,0 +1,22 @@
+# Jupyter-generated files
+.ipynb_checkpoints/
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local IDE and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporary office files
+~$*.xlsx
+~$*.docx
+~$*.pptx
+
+# Legacy source files used during repository preparation
+old/
