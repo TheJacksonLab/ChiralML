@@ -3,14 +3,35 @@
 This repository provides the supporting code and analysis data for the PNAS
 manuscript *Predictive and
 Interpretable Data-Driven Framework for Deciphering Chiral Emergence of
-Conjugated Polymers*. It contains a data-processing example, analysis-ready
-features, and figure-reproduction notebooks.
+Conjugated Polymers*. It contains experimental records, polymer information,
+a data-processing example, analysis-ready features, and figure-reproduction
+notebooks.
 
-## Dataset
+Manuscript DOI: `DOI_PLACEHOLDER` (to be added upon publication).
 
-## Processing pipeline
+## Experimental data
 
-[`processing_pipeline/Feature_Generation.ipynb`](processing_pipeline/Feature_Generation.ipynb)
+- [`experimental_data/Supporting_Information.docx`](experimental_data/Supporting_Information.docx): Supporting Information containing the
+  experimental methods and dataset in Section S1, Table S1. The table lists
+  polymer names, solvents, temperatures, concentrations, assembly outcomes
+  (`c`: chiral; `i`: isotropic; `a`: aggregated), and data sources. As explained
+  in the SI, repeated CD measurements under the same conditions are retained separately.
+- [`experimental_data/Polymer_Information.xlsx`](experimental_data/Polymer_Information.xlsx):
+  Polymer information for descriptor construction. The `molecular Information`
+  sheet contains 71 polymer records, including molecular weights (Mn and Mw),
+  dispersity (PDI), and manually curated counts of side-chain and backbone
+  atoms, bonds, branches, rings, and structural units. Structural counts are
+  defined per polymer repeating unit. Family and source information are also
+  provided where recorded.
+
+These files document the experimental records and polymer-level inputs to
+feature generation. The processed feature matrices and per-record absolute
+g-factor labels used by the analysis notebooks are provided separately in
+`data_analysis/data/analysis_data.xlsx`; the labels are in `Exp_ML_metadata`.
+
+## Feature generation
+
+[`feature_generation/Feature_Generation.ipynb`](feature_generation/Feature_Generation.ipynb)
 is a single-data-point example of the feature-generation workflow. The user
 supplies polymer and solvent structures, experimental conditions, molecular
 weights, manually curated side-chain and backbone counts, and a COSMO-RS
@@ -50,7 +71,7 @@ contains the analysis-ready data used by all three figure notebooks:
 The classification workflow trains on the labeled experimental features.
 Figure 6c uses the all-combination features for both prediction and
 plotting. Generated PNG files are written to
-`data_analysis/outputs/figures/`.
+`data_analysis/figures/`.
 
 ### Analysis environment
 
