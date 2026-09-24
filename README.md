@@ -1,6 +1,6 @@
 # Predictive and Interpretable Data-Driven Framework for Deciphering Chiral Emergence of Conjugated Polymers
 
-This repository provides the supporting code and analysis data for the PNAS
+This repository provides the supporting code and analysis data for the 
 manuscript *Predictive and
 Interpretable Data-Driven Framework for Deciphering Chiral Emergence of
 Conjugated Polymers*. It contains experimental records, polymer information,
